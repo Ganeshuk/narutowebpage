@@ -1,0 +1,75 @@
+
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: black;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-mobile {
+  display: none; /* This will be visible only on smaller screens */
+  padding: 1rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.7s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+
+  transform: rotate(45deg);
+  transform-origin: 5px 5px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 5px -2px;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height:0%;
+  transition: all 0.6s ease;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+ 
+   .moblie{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
+  .nav-mobile {
+    display: block;
+    background-color: black;
+  }
+}
